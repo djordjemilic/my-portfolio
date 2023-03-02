@@ -89,8 +89,8 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const mobileNav = useRef();
   useOnClickOutside(mobileNav, () => setNavOpen(false));
-
   const [profileOpen, setProfileOpen] = useState(false);
+
   return (
     <>
       <motion.nav
@@ -98,17 +98,13 @@ const Navbar = () => {
         variants={OpicityAnim}
         initial="hidden"
         animate="visible"
-        exit="hidden"
-      >
+        exit="hidden">
         <div className={styles.logo}>
           <Link href="/">
             <a>A</a>
           </Link>
         </div>
-        <ul
-          onMouseEnter={() => setBackground(false)}
-          onMouseLeave={() => setBackground(true)}
-        >
+        <ul onMouseEnter={() => setBackground(false)} onMouseLeave={() => setBackground(true)}>
           <li>
             <Link href="/">
               <a>HOME</a>
@@ -138,9 +134,7 @@ const Navbar = () => {
             className={styles.more}
             onClick={() => {
               setProfileOpen(true);
-              console.log(profileOpen);
-            }}
-          >
+            }}>
             <HiDotsHorizontal />
           </button>
         </ul>
@@ -156,44 +150,28 @@ const Navbar = () => {
               variants={NavbarAnim}
               initial="hidden"
               animate="visible"
-              exit="hidden"
-            >
-              <button
-                className={styles.close}
-                onClick={() => setNavOpen(false)}
-              >
+              exit="hidden">
+              <button className={styles.close} onClick={() => setNavOpen(false)}>
                 <FaTimes />
               </button>
               <div className={styles.links}>
                 <ul>
-                  <motion.li
-                    variants={NavbarItemAnim}
-                    onClick={() => setNavOpen(false)}
-                  >
+                  <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
                     <Link href="/">
                       <a>HOME</a>
                     </Link>
                   </motion.li>
-                  <motion.li
-                    variants={NavbarItemAnim}
-                    onClick={() => setNavOpen(false)}
-                  >
+                  <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
                     <Link href="/showcase">
                       <a>SHOWCASE</a>
                     </Link>
                   </motion.li>
-                  <motion.li
-                    variants={NavbarItemAnim}
-                    onClick={() => setNavOpen(false)}
-                  >
+                  <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
                     <Link href="/clients">
                       <a>CLIENTS</a>
                     </Link>
                   </motion.li>
-                  <motion.li
-                    variants={NavbarItemAnim}
-                    onClick={() => setNavOpen(false)}
-                  >
+                  <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
                     <Link href="/contact">
                       <a>CONTACT</a>
                     </Link>
@@ -206,8 +184,7 @@ const Navbar = () => {
               variants={NavbarBgAnim}
               initial="hidden"
               animate="visible"
-              exit="hidden"
-            ></motion.div>
+              exit="hidden"></motion.div>
           </>
         )}
         {/* PROFILE */}
@@ -223,8 +200,7 @@ const Navbar = () => {
                 setBackground(true);
               }
             }}
-            className={styles.profile}
-          >
+            className={styles.profile}>
             <Profile setProfile={() => setProfileOpen(false)} />
           </motion.div>
         )}
