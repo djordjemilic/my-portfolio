@@ -1,0 +1,100 @@
+.information {
+    display: flex;
+    gap: 4rem;
+    @media screen and (max-width: 1440px) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: 420px) {
+        align-items: center;
+        text-align: center;
+    }
+
+    h3 {
+        color: var(--color-text);
+        font-size: 0.85rem;
+    }
+    h2 {
+        color: var(--color-text-active);
+        font-size: 1.8rem;
+        white-space: nowrap;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: max-content;
+    }
+}
+
+.detailContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
+    }
+    .iconContainer {
+        padding: 0.4rem;
+        border-radius: 50%;
+        outline: 3px solid var(--color-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            color: var(--color-text);
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    .from {
+        display: flex;
+        gap: 1.5rem;
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+    .inputContainer {
+        width: 100%;
+        label {
+            display: none;
+        }
+        input,
+        textarea {
+            padding: 1rem;
+            width: 100%;
+            background: transparent;
+            color: var(--color-text);
+            font-size: 1rem;
+            font-weight: 500;
+            border: 2px solid var(--color-text);
+            border-radius: 6px;
+        }
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+    }
+    .submit {
+        align-self: flex-end;
+        padding: 1rem;
+        border-radius: 6px;
+        background: transparent;
+        border: 2px solid var(--color-text);
+        color: var(--color-text);
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all ease-in-out 250ms;
+        &:hover,
+        &:focus {
+            border-color: var(--color-text-active);
+            color: var(--color-text-active);
+        }
+    }
+}

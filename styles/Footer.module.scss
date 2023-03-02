@@ -1,0 +1,44 @@
+.container {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        background: rgba(0, 0, 0, 0.82);
+        padding: 1.5rem 2rem;
+    }
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 1rem 2rem;
+    }
+    ul {
+        display: flex;
+        gap: 0.85rem;
+        a {
+            padding: 0.5rem 0.3rem;
+            color: var(--color-text);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.2s ease-in-out;
+            &:hover,
+            &:focus {
+                color: var(--color-text-active);
+            }
+        }
+    }
+    .copyright {
+        user-select: none;
+        color: var(--color-text);
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}

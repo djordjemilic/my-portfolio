@@ -1,0 +1,92 @@
+.carousel {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.829);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    user-select: none;
+
+    .close {
+        position: absolute;
+        z-index: 10;
+        top: 5%;
+        right: 5%;
+        padding: 0.5rem;
+        cursor: pointer;
+        &:hover {
+            svg {
+                color: var(--color-text-active);
+            }
+        }
+        svg {
+            font-size: 2.2rem;
+            transition: all ease-in-out 250ms;
+            color: var(--color-text);
+        }
+    }
+    .prev,
+    .next {
+        background: transparent;
+        position: absolute;
+        z-index: 1;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        @media screen and (max-width: 768px) {
+            padding: 2rem;
+        }
+        @media screen and (max-width: 550px) {
+            padding: 1rem;
+        }
+        cursor: pointer;
+        .inner {
+            display: flex;
+            padding: 0.5rem;
+            background: black;
+            outline: 1px solid white;
+            transition: background ease-in-out 250ms;
+            &:hover,
+            :focus {
+                background: white;
+                svg {
+                    color: black;
+                }
+            }
+            @media screen and (max-width: 550px) {
+                padding: 0.1rem;
+            }
+            svg {
+                font-size: 2.5rem;
+                transition: all ease-in-out 250ms;
+                color: var(--color-text);
+            }
+        }
+    }
+    .next {
+        left: 100%;
+        transform: translateX(-100%);
+    }
+    .contain {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        position: relative;
+        width: 80%;
+        height: 90%;
+        .inner {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            cursor: grab;
+        }
+    }
+}
