@@ -27,8 +27,7 @@ const Footer = () => {
       variants={variants}
       initial="hidden"
       animate="visible"
-      exit="hidden"
-    >
+      exit="hidden">
       <ul>
         <li>
           <Link href="">
@@ -52,7 +51,7 @@ const Footer = () => {
         </li>
       </ul>
       <div className={styles.copyright}>
-        <span>COPYRIGHT @ 2022.</span>
+        <span>COPYRIGHT @ {new Date().getFullYear}.</span>
       </div>
     </motion.footer>
   );
