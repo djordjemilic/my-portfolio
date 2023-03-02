@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    .page {
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        @media screen and (min-width: 1920px) {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+    }
+}
