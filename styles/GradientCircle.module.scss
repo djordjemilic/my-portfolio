@@ -1,0 +1,20 @@
+.container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(ellipse at left top, #49494f2d 40%, #0000006e 100%);
+}
+.black {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(ellipse at left top, #0000009a 0%, #000000bf 5%);
+    transition: all ease-in-out 0.5s;
+    opacity: 0;
+}

@@ -1,0 +1,147 @@
+.outer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .content {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        user-select: none;
+    }
+    .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .center {
+        position: relative;
+        justify-content: space-between;
+        a {
+            cursor: pointer;
+            color: var(--color-text);
+            transition: all 0.2s ease-in-out;
+            padding: 0.5rem;
+            &:hover,
+            &:focus {
+                color: var(--color-text-active);
+            }
+        }
+        .line1,
+        .line2 {
+            height: 100%;
+            width: 1px;
+            background: rgba(150, 150, 150, 0.25);
+            a {
+                @media screen and (max-width: 425px) {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    span {
+                        width: 100vw;
+                        white-space: normal;
+                        transition: none;
+                        text-align: center;
+                    }
+                }
+                .linkContainer {
+                    position: absolute;
+                    top: 40%;
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg) translateX(35%);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2rem;
+                    @media screen and (max-width: 425px) {
+                        position: relative;
+                        writing-mode: horizontal-tb;
+                        transform: rotate(0) translateY(100%);
+                        &:hover {
+                            .small {
+                                transform: translateX(0px);
+                            }
+                            .large {
+                                transform: translateX(0px);
+                            }
+                        }
+                    }
+                    &:hover {
+                        .small {
+                            transform: translateY(15px);
+                        }
+                        .large {
+                            transform: translateY(-15px);
+                        }
+                    }
+                }
+                .linkContainer2 {
+                    position: absolute;
+                    top: 55%;
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg) translateX(65%);
+                    @media screen and (max-width: 425px) {
+                        position: relative;
+                        writing-mode: horizontal-tb;
+                        transform: rotate(0) translateY(-100%);
+                        &:hover {
+                            .small {
+                                transform: translateX(0px);
+                            }
+                            .large {
+                                transform: translateX(0px);
+                            }
+                        }
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2rem;
+
+                    &:hover {
+                        .small {
+                            transform: translateY(15px);
+                        }
+                        .large {
+                            transform: translateY(-15px);
+                        }
+                    }
+                }
+            }
+        }
+        .small {
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.3s ease-in-out;
+        }
+        .large {
+            font-size: 2.4rem;
+            font-style: italic;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
