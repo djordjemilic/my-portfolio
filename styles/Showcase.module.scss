@@ -1,0 +1,37 @@
+.description {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    h2 {
+        max-width: 1000px;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+.album {
+    max-width: 1500px;
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    gap: 3rem;
+
+    .imageContainer {
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+        img {
+            transition: transform 250ms ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
