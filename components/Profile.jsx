@@ -25,14 +25,15 @@ const Profile = ({ setProfile }) => {
             />
           </div>
           <div className={styles.name}>
-            <span className={styles.small}>PHOTOGRAPHER</span>
-            <span className={styles.large}>ANGELOS CHOSTELIDIS</span>
+            <span className={styles.small}>SOFTWARE ENGINEER</span>
+            <span className={styles.large}>ĐORĐE MILIĆ </span>
+            <span className={styles.small}>(pronounced as George)</span>
           </div>
         </div>
         <p className={styles.description}>
-          Nice to meet you, friend! My name is Angelos Chostelidis. I am from
-          Greece. Photography is my passion. Through the lens the world looks
-          different and I would like to show you this difference.
+          Nice to meet you, friend! My name is Angelos Chostelidis. I am from Greece. Photography is
+          my passion. Through the lens the world looks different and I would like to show you this
+          difference.
         </p>
         <Link href="/contact">
           <a className={styles.btn}>

@@ -21,16 +21,9 @@ const opacityAnim = {
 const Description = () => {
   return (
     <div className={styles.description}>
-      <motion.h2
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        variants={opacityAnim}
-      >
-        Nice to meet you, friend! My name is Angelos Chostelidis. I’m a
-        professional photographer from Thessaloniki, Greece. If you have any
-        questions, suggestions or you just want to book a photo session feel
-        free to use the contact form below. Lets make something great together!
+      <motion.h2 initial="hidden" animate="visible" exit="hidden" variants={opacityAnim}>
+        Currently open to opportunities withing the software engineering discipline and if you feel
+        like we would be a great match, I would love to hear from you!
       </motion.h2>
     </div>
   );

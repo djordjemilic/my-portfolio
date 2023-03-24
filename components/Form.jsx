@@ -59,24 +59,23 @@ const Form = () => {
       initial="hidden"
       animate="visible"
       exit="hidden"
-      variants={opacityAnim}
-    >
+      variants={opacityAnim}>
       <div className={styles.information}>
         <div className={styles.details}>
           <span>
-            <h3>MY CONTACTS AND SOCIALS</h3>
+            <h3>MY CONTACT AND SOCIALS</h3>
             <h2>HOW TO FIND ME</h2>
           </span>
 
           <Detail icon={<IoLocationOutline />}>
-            <span>1250 Random St,Athens, CO 32104</span>
+            <span>Novi Sad, Serbia</span>
           </Detail>
           <Detail icon={<BsTelephone />}>
-            <span>+1 (123) 456 - 78 - 90</span>
+            <span>+381 65 250 98 92</span>
           </Detail>
           {/* EMAIL */}
           <Detail icon={<AiOutlineMail />}>
-            <span>test@test.com</span>
+            <span>milicdorde33@gmail.com</span>
           </Detail>
           {/* SOCIALS */}
           <Detail icon={<IoShareSocialOutline />}>
@@ -86,17 +85,9 @@ const Form = () => {
         <form onSubmit={(e) => e.preventDefault()} className={styles.form}>
           <div className={styles.from}>
             <InputContainer label="Name" htmlFor="name" />
-            <InputContainer
-              label="Email"
-              htmlFor="email"
-              placeHolder={"Enter your email"}
-            />
+            <InputContainer label="Email" htmlFor="email" placeHolder={"Enter your email"} />
           </div>
-          <InputContainer
-            label="Phone"
-            htmlFor="phone"
-            placeHolder={"Enter your phone"}
-          />
+          <InputContainer label="Phone" htmlFor="phone" placeHolder={"Enter your phone"} />
           <InputContainer
             label="Message"
             htmlFor="message"

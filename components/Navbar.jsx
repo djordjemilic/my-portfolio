@@ -101,7 +101,7 @@ const Navbar = () => {
         exit="hidden">
         <div className={styles.logo}>
           <Link href="/">
-            <a>A</a>
+            <a>G</a>
           </Link>
         </div>
         <ul onMouseEnter={() => setBackground(false)} onMouseLeave={() => setBackground(true)}>
@@ -112,7 +112,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/showcase">
-              <a>SHOWCASE</a>
+              <a>PROJECTS</a>
             </Link>
           </li>
           <li>
@@ -123,6 +123,11 @@ const Navbar = () => {
           <li>
             <Link href="/contact">
               <a>CONTACT</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>BLOG</a>
             </Link>
           </li>
 
@@ -163,7 +168,7 @@ const Navbar = () => {
                   </motion.li>
                   <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
                     <Link href="/showcase">
-                      <a>SHOWCASE</a>
+                      <a>PROJECTS</a>
                     </Link>
                   </motion.li>
                   <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
@@ -174,6 +179,11 @@ const Navbar = () => {
                   <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
                     <Link href="/contact">
                       <a>CONTACT</a>
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={NavbarItemAnim} onClick={() => setNavOpen(false)}>
+                    <Link href="/">
+                      <a>BLOG</a>
                     </Link>
                   </motion.li>
                 </ul>

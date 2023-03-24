@@ -2,6 +2,8 @@ import styles from "../styles/Footer.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+const copyrightYear = new Date().getFullYear();
+
 const variants = {
   hidden: {
     opacity: 0,
@@ -30,28 +32,18 @@ const Footer = () => {
       exit="hidden">
       <ul>
         <li>
-          <Link href="">
-            <a>Fb</a>
-          </Link>
+          <a href="https://www.linkedin.com/in/djordjemilicc/" target="_blank" rel="noreferrer">
+            in
+          </a>
         </li>
         <li>
-          <Link href="">
-            <a>Tw</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="">
-            <a>In</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="">
-            <a>Yt</a>
-          </Link>
+          <a href="https://github.com/djordjemilic" target="_blank" rel="noreferrer">
+            github
+          </a>
         </li>
       </ul>
       <div className={styles.copyright}>
-        <span>COPYRIGHT @ {new Date().getFullYear}.</span>
+        <span>COPYRIGHT @{copyrightYear}.</span>
       </div>
     </motion.footer>
   );

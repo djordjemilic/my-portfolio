@@ -39,12 +39,7 @@ const ImageContainer = ({ src, alt, setCarousel }) => {
 const Description = () => {
   return (
     <div className={styles.description}>
-      <motion.h2
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        variants={opacityAnim}
-      >
+      <motion.h2 initial="hidden" animate="visible" exit="hidden" variants={opacityAnim}>
         {` Personal photo shoot for my friend. An exciting girl, a bright palette
         of colors. What else is needed for good photos? That's right: a
         professional photographer.`}
@@ -68,11 +63,7 @@ const Showcase = () => {
       {/* --- Carousel --- */}
       <AnimatePresence>
         {carousel.isOpen && (
-          <Carousel
-            sourcesTable={sources}
-            state={carousel}
-            setState={setCarousel}
-          />
+          <Carousel sourcesTable={sources} state={carousel} setState={setCarousel} />
         )}
       </AnimatePresence>
       {/* ------ */}
@@ -83,8 +74,7 @@ const Showcase = () => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          variants={opacityAnim}
-        >
+          variants={opacityAnim}>
           {sources.map((src, index) => {
             return (
               <ImageContainer
